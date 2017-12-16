@@ -1,0 +1,33 @@
+
+---[ RS - Spring WebHandling - Links ]---
+
+
+---[ Theory
+
+DONE
+http://www.baeldung.com/building-a-restful-web-service-with-spring-and-java-based-configuration
+http://www.baeldung.com/spring-mvc-controller-custom-http-status-code
+http://www.baeldung.com/exception-handling-for-rest-with-spring
+http://www.beabetterdeveloper.com/2013/07/spring-mvc-requestbody-and-responsebody.html
+
+IN PROGRESS
+-
+
+TODO
+https://github.com/jirutka/spring-rest-exception-handler [import or do it by-myself ?]
+
+
+---[ Frameworks/Platforms
+
+-
+
+
+---[ Code
+
+-
+
+
+---[ Repo
+
+https://github.com/gregorriegler/babdev-spring/tree/master/message-converter
+https://github.com/jirutka/spring-rest-exception-handler

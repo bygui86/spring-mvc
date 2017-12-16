@@ -1,0 +1,60 @@
+
+buildscript {
+	ext {
+		springBootVersion = "1.5.6.RELEASE"
+		lombokVersion="1.16.18"
+		opencsvVersion="4.0"
+	}
+	
+	repositories {
+		mavenCentral()
+	}
+	
+	dependencies {
+		// Spring Boot gradle plugin
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+
+apply plugin: "java"
+apply plugin: "eclipse"
+// Spring Boot gradle plugin [stable]
+apply plugin: "org.springframework.boot"
+
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+jar {
+	baseName = "rs-springwebhandling"
+	version =  "0.1"
+}
+
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+
+	// Spring DevTools (Boot)
+	compile("org.springframework.boot:spring-boot-starter")
+	runtime("org.springframework.boot:spring-boot-devtools")
+
+	// Spring Web
+	compile("org.springframework.boot:spring-boot-starter-web")
+	
+	
+	// Lombok
+	compileOnly("org.projectlombok:lombok:${lombokVersion}")
+	
+	// OpenCSV
+	compile("com.opencsv:opencsv:${opencsvVersion}")
+
+	
+	// Testing
+	testCompile("org.springframework.boot:spring-boot-starter-test")
+	testCompile("com.opencsv:opencsv:${opencsvVersion}")
+	testCompileOnly("org.projectlombok:lombok:${lombokVersion}")
+}
